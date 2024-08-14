@@ -4,14 +4,15 @@ provider "aws" {
 
 resource "aws_s3_bucket" "dev_s3" {
   bucket_prefix = "dev-"
+  acl           = "public-read-write"
 
   tags = {
     Environment          = "Dev"
     yor_name             = "dev_s3"
     yor_trace            = "bae3c3c4-e2ed-4b3b-acd2-56a760898e12"
-    git_commit           = "6b8e3d676ad0d40a8d84cfac8f751f726f556339"
+    git_commit           = "0f111eb2f99fdf9163293f4bee99d269ac8abf7b"
     git_file             = "code/build/s3.tf"
-    git_last_modified_at = "2024-08-14 16:22:51"
+    git_last_modified_at = "2024-08-14 16:48:47"
     git_last_modified_by = "tmprender+8dso@gmail.com"
     git_modifiers        = "tmprender+8dso"
     git_org              = "devsecops-workshop-aug24"
